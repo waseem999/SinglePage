@@ -62,13 +62,13 @@
 	
 	var _HomeContainer2 = _interopRequireDefault(_HomeContainer);
 	
-	var _Journal = __webpack_require__(273);
+	var _Journal = __webpack_require__(274);
 	
 	var _Journal2 = _interopRequireDefault(_Journal);
 	
 	var _reactRedux = __webpack_require__(235);
 	
-	var _store = __webpack_require__(274);
+	var _store = __webpack_require__(275);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
@@ -26635,6 +26635,10 @@
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
+	var _SmallArticle = __webpack_require__(273);
+	
+	var _SmallArticle2 = _interopRequireDefault(_SmallArticle);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28832,11 +28836,35 @@
 	    return _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'logo' },
+	            _react2.default.createElement(
+	                'h3',
+	                null,
+	                'designory'
+	            )
+	        ),
 	        _react2.default.createElement(_Navbar2.default, null),
 	        _react2.default.createElement(
-	            'h3',
-	            null,
-	            'Designory'
+	            'div',
+	            { className: 'articleone' },
+	            _react2.default.createElement(_SmallArticle2.default, null)
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'articletwo' },
+	            _react2.default.createElement(_SmallArticle2.default, null)
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'articletwo' },
+	            _react2.default.createElement(_SmallArticle2.default, null)
+	        ),
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'articlethree' },
+	            _react2.default.createElement(_SmallArticle2.default, null)
 	        )
 	    );
 	};
@@ -28848,6 +28876,10 @@
 	var _Navbar = __webpack_require__(272);
 	
 	var _Navbar2 = _interopRequireDefault(_Navbar);
+	
+	var _SmallArticle = __webpack_require__(273);
+	
+	var _SmallArticle2 = _interopRequireDefault(_SmallArticle);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28932,6 +28964,36 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Journal = function Journal(props) {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'SMALL ARTICLE'
+	        )
+	    );
+	};
+	
+	exports.default = Journal;
+
+/***/ },
+/* 274 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
 	var _Navbar = __webpack_require__(272);
 	
 	var _Navbar2 = _interopRequireDefault(_Navbar);
@@ -28954,7 +29016,7 @@
 	exports.default = Journal;
 
 /***/ },
-/* 274 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28965,7 +29027,7 @@
 	
 	var _redux = __webpack_require__(244);
 	
-	var _rootReducer = __webpack_require__(275);
+	var _rootReducer = __webpack_require__(276);
 	
 	var _rootReducer2 = _interopRequireDefault(_rootReducer);
 	
@@ -28976,7 +29038,7 @@
 	exports.default = store;
 
 /***/ },
-/* 275 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
