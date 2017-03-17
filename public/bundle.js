@@ -62,9 +62,21 @@
 	
 	var _HomeContainer2 = _interopRequireDefault(_HomeContainer);
 	
+	var _Portfolio = __webpack_require__(276);
+	
+	var _Portfolio2 = _interopRequireDefault(_Portfolio);
+	
+	var _Process = __webpack_require__(277);
+	
+	var _Process2 = _interopRequireDefault(_Process);
+	
 	var _Journal = __webpack_require__(274);
 	
 	var _Journal2 = _interopRequireDefault(_Journal);
+	
+	var _Contact = __webpack_require__(278);
+	
+	var _Contact2 = _interopRequireDefault(_Contact);
 	
 	var _reactRedux = __webpack_require__(235);
 	
@@ -84,7 +96,10 @@
 	            _reactRouter.Route,
 	            { path: '/', component: _AppContainer.AppContainer },
 	            _react2.default.createElement(_reactRouter.IndexRoute, { component: _HomeContainer2.default }),
-	            _react2.default.createElement(_reactRouter.Route, { path: '/journal', component: _Journal2.default })
+	            _react2.default.createElement(_reactRouter.Route, { path: '/portfolio', component: _Portfolio2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/process', component: _Process2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/journal', component: _Journal2.default }),
+	            _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default })
 	        )
 	    )
 	), document.getElementById('app'));
@@ -26665,23 +26680,29 @@
 	            articleOne: {
 	                title: "Article 1",
 	                date: "August 8, 2013",
-	                content: "blah blah blah"
+	                content: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam"
 	            },
 	            articleTwo: {
 	                title: "Article 2",
 	                date: "August 14, 2013",
-	                content: "blah blah blah"
+	                content: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam"
 	            },
 	            articleThree: {
 	                title: "Article 3",
 	                date: "August 21, 2013",
-	                content: "blah blah blah"
+	                content: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam"
 	            }
 	        };
+	        _this.handleDownload = _this.handleDownload.bind(_this);
 	        return _this;
 	    }
 	
 	    _createClass(HomeContainer, [{
+	        key: 'handleDownload',
+	        value: function handleDownload(e) {
+	            alert('Downloading');
+	        }
+	    }, {
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
@@ -26704,22 +26725,22 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'message' },
-	                    _react2.default.createElement(_Message2.default, null)
+	                    _react2.default.createElement(_Message2.default, { handleDownload: this.handleDownload })
 	                ),
 	                _react2.default.createElement('div', null),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'articleone' },
+	                    { className: 'article-1' },
 	                    _react2.default.createElement(_SmallArticle2.default, { article: this.state.articleOne })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'articletwo' },
+	                    { className: 'article-2' },
 	                    _react2.default.createElement(_SmallArticle2.default, { article: this.state.articleTwo })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'articlethree' },
+	                    { className: 'article-3' },
 	                    _react2.default.createElement(_SmallArticle2.default, { article: this.state.articleThree })
 	                )
 	            );
@@ -26729,15 +26750,7 @@
 	    return HomeContainer;
 	}(_react.Component);
 	
-	var mapStateToProps = function mapStateToProps(state, ownProps) {
-	    return {};
-	};
-	
-	var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
-	    return {};
-	};
-	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(HomeContainer);
+	exports.default = HomeContainer;
 
 /***/ },
 /* 235 */
@@ -28901,7 +28914,7 @@
 	    return _react2.default.createElement(
 	        "div",
 	        null,
-	        _react2.default.createElement("div", { className: "innerbox" }),
+	        _react2.default.createElement("div", { className: "articleinnerbox" }),
 	        _react2.default.createElement(
 	            "div",
 	            null,
@@ -28909,6 +28922,16 @@
 	                "h2",
 	                null,
 	                "" + props.article.title
+	            ),
+	            _react2.default.createElement(
+	                "h6",
+	                null,
+	                "" + props.article.date
+	            ),
+	            _react2.default.createElement(
+	                "p",
+	                null,
+	                "" + props.article.content
 	            )
 	        )
 	    );
@@ -28932,7 +28955,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var Message = function Message() {
+	var Message = function Message(props) {
 	    return _react2.default.createElement(
 	        "div",
 	        null,
@@ -28953,7 +28976,7 @@
 	        ),
 	        _react2.default.createElement(
 	            "button",
-	            { className: "buttonstyle" },
+	            { className: "buttonstyle", onClick: props.handleDownload },
 	            "DOWNLOAD NOW"
 	        )
 	    );
@@ -29042,10 +29065,6 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Navbar = __webpack_require__(273);
-	
-	var _Navbar2 = _interopRequireDefault(_Navbar);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Journal = function Journal() {
@@ -29053,9 +29072,9 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	            'p',
+	            'h1',
 	            null,
-	            'home'
+	            'JOURNAL PAGE'
 	        )
 	    );
 	};
@@ -29074,13 +29093,7 @@
 	
 	var _redux = __webpack_require__(244);
 	
-	var _rootReducer = __webpack_require__(276);
-	
-	var _rootReducer2 = _interopRequireDefault(_rootReducer);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var store = (0, _redux.createStore)(_rootReducer2.default);
+	var store = (0, _redux.createStore)(function () {});
 	
 	exports.default = store;
 
@@ -29091,18 +29104,88 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _redux = __webpack_require__(244);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Portfolio = function Portfolio() {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'h1',
+	            null,
+	            'PORTFOLIO PAGE'
+	        )
+	    );
+	};
+	
+	exports.default = Portfolio;
+
+/***/ },
+/* 277 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = (0, _redux.combineReducers)({});
+	var Process = function Process() {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'h1',
+	            null,
+	            'PROCESS PAGE'
+	        )
+	    );
+	};
+	
+	exports.default = Process;
+
+/***/ },
+/* 278 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Contact = function Contact() {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'h1',
+	            null,
+	            'CONTACT PAGE'
+	        )
+	    );
+	};
+	
+	exports.default = Contact;
 
 /***/ }
 /******/ ]);

@@ -1,9 +1,8 @@
 import React from 'react';
-import Navbar from './Navbar.jsx';
 
 const Journal = () => (
       <div>
-          <p>home</p>
+          <h1>JOURNAL PAGE</h1>
       </div>
 );
 

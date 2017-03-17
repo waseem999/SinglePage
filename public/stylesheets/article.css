@@ -1,4 +1,4 @@
-.article, .articleone, .articletwo, .articlethree {
+.article, .article-1, .article-2, .article-3 {
   position: absolute;
   background-color: white;
   width: 235px;
@@ -10,19 +10,63 @@
   border-style: solid;
   z-index: 999; }
 
-.articleone {
-  left: 20%; }
-
-.articletwo {
-  left: 50%; }
-
-.articlethree {
-  left: 80%; }
-
-.articlethree .innerbox {
+.innerbox, .article-1 .articleinnerbox, .article-2 .articleinnerbox, .article-3 .articleinnerbox {
   position: relative;
   width: 215px;
   height: 110px;
   margin: auto;
-  margin-top: 5%;
-  background-color: darkgrey; }
+  margin-top: 5%; }
+
+.article-1 {
+  left: 20%; }
+  .article-1 h2 {
+    margin-left: 15px;
+    margin-top: 5px;
+    font-weight: normal; }
+  .article-1 h6 {
+    margin-left: 15px;
+    margin-top: -20px;
+    font-weight: normal; }
+  .article-1 p {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: normal;
+    font-size: xx-small; }
+  .article-1 .articleinnerbox {
+    background-color: #e6e6e6; }
+
+.article-2 {
+  left: 50%; }
+  .article-2 h2 {
+    margin-left: 15px;
+    margin-top: 5px;
+    font-weight: normal; }
+  .article-2 h6 {
+    margin-left: 15px;
+    margin-top: -20px;
+    font-weight: normal; }
+  .article-2 p {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: normal;
+    font-size: xx-small; }
+  .article-2 .articleinnerbox {
+    background-color: #b3b3b3; }
+
+.article-3 {
+  left: 80%; }
+  .article-3 h2 {
+    margin-left: 15px;
+    margin-top: 5px;
+    font-weight: normal; }
+  .article-3 h6 {
+    margin-left: 15px;
+    margin-top: -20px;
+    font-weight: normal; }
+  .article-3 p {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: normal;
+    font-size: xx-small; }
+  .article-3 .articleinnerbox {
+    background-color: #737373; }
