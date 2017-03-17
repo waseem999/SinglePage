@@ -1,32 +1,28 @@
-.articleone {
+.article, .articleone, .articletwo, .articlethree {
   position: absolute;
+  background-color: white;
   width: 235px;
   top: 60%;
-  left: 20%;
   height: 250px;
   margin-left: -150px;
   margin-top: -100px;
   border-color: black;
-  border-style: solid; }
+  border-style: solid;
+  z-index: 999; }
+
+.articleone {
+  left: 20%; }
 
 .articletwo {
-  position: absolute;
-  width: 235px;
-  top: 60%;
-  left: 50%;
-  height: 250px;
-  margin-left: -150px;
-  margin-top: -100px;
-  border-color: black;
-  border-style: solid; }
+  left: 50%; }
 
 .articlethree {
-  position: absolute;
-  width: 235px;
-  top: 60%;
-  left: 80%;
-  height: 250px;
-  margin-left: -150px;
-  margin-top: -100px;
-  border-color: black;
-  border-style: solid; }
+  left: 80%; }
+
+.articlethree .innerbox {
+  position: relative;
+  width: 215px;
+  height: 110px;
+  margin: auto;
+  margin-top: 5%;
+  background-color: darkgrey; }

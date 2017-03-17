@@ -1,16 +1,14 @@
 #main-navbar {
   border-color: black;
-  border-style: solid;
-  margin-top: -75px;
+  margin-top: -85px;
   width: 100%;
-  font-size: 1.5em;
+  font-size: 1.4em;
   position: fixed;
   text-decoration: none; }
   #main-navbar ul a {
     text-decoration: none;
     color: black; }
   #main-navbar ul li {
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
     display: inline;
     float: right;
     margin: 5px;
@@ -18,49 +16,79 @@
     text-decoration: none;
     font-size: .5em; }
 
-.articleone {
+.article, .articleone, .articletwo, .articlethree {
   position: absolute;
+  background-color: white;
   width: 235px;
   top: 60%;
-  left: 20%;
   height: 250px;
   margin-left: -150px;
   margin-top: -100px;
   border-color: black;
-  border-style: solid; }
+  border-style: solid;
+  z-index: 999; }
+
+.articleone {
+  left: 20%; }
 
 .articletwo {
-  position: absolute;
-  width: 235px;
-  top: 60%;
-  left: 50%;
-  height: 250px;
-  margin-left: -150px;
-  margin-top: -100px;
-  border-color: black;
-  border-style: solid; }
+  left: 50%; }
 
 .articlethree {
-  position: absolute;
-  width: 235px;
-  top: 60%;
-  left: 80%;
-  height: 250px;
-  margin-left: -150px;
-  margin-top: -100px;
-  border-color: black;
-  border-style: solid; }
+  left: 80%; }
+
+.articlethree .innerbox {
+  position: relative;
+  width: 215px;
+  height: 110px;
+  margin: auto;
+  margin-top: 5%;
+  background-color: darkgrey; }
 
 * {
   box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; }
 
 .logo {
   z-index: 1; }
   .logo h3 {
-    margin-left: 10px;
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-size: 1.2em; }
+    margin-left: 15px;
+    font-size: 1.4em; }
+
+.message {
+  width: 100%;
+  height: 380px;
+  position: relative;
+  background-color: lightgrey;
+  border-color: black;
+  border-style: solid;
+  z-index: 2; }
+  .message p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-left: 10%;
+    margin-top: 4%; }
+  .message h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 2.3em;
+    margin-left: 10%; }
+
+.buttonstyle {
+  background-color: black;
+  /* Green */
+  border: none;
+  margin-left: 10%;
+  margin-top: 10px;
+  color: white;
+  padding: 8px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px; }

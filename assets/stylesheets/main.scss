@@ -8,14 +8,52 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 }
 
 .logo {
   z-index: 1;
   h3 {
-    margin-left: 10px;
-    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-    font-size: 1.2em
+    margin-left: 15px;
+    font-size: 1.4em
   }
 }
 
+.message {
+  width: 100%;
+  height: 380px;
+  position: relative;
+  background-color: lightgrey;
+  border-color: black;
+  border-style: solid;
+  z-index: 2;
+    p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-left: 10%;
+    margin-top: 4%
+
+    }
+    h2 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 2.3em;
+    margin-left: 10%
+
+    }
+}
+
+.buttonstyle {
+    background-color: black; /* Green */
+    border: none;
+    margin-left: 10%;
+    margin-top: 10px;
+    color: white;
+    padding: 8px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}

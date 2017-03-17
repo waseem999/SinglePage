@@ -26631,13 +26631,17 @@
 	
 	var _reactRedux = __webpack_require__(235);
 	
-	var _Home = __webpack_require__(271);
-	
-	var _Home2 = _interopRequireDefault(_Home);
-	
-	var _SmallArticle = __webpack_require__(273);
+	var _SmallArticle = __webpack_require__(271);
 	
 	var _SmallArticle2 = _interopRequireDefault(_SmallArticle);
+	
+	var _Message = __webpack_require__(272);
+	
+	var _Message2 = _interopRequireDefault(_Message);
+	
+	var _Navbar = __webpack_require__(273);
+	
+	var _Navbar2 = _interopRequireDefault(_Navbar);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -26646,28 +26650,83 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//import Home from '../components/Home.jsx';
 	
-	var SignupContainer = function (_Component) {
-	    _inherits(SignupContainer, _Component);
 	
-	    function SignupContainer() {
-	        _classCallCheck(this, SignupContainer);
+	var HomeContainer = function (_Component) {
+	    _inherits(HomeContainer, _Component);
 	
-	        return _possibleConstructorReturn(this, (SignupContainer.__proto__ || Object.getPrototypeOf(SignupContainer)).apply(this, arguments));
+	    function HomeContainer(props) {
+	        _classCallCheck(this, HomeContainer);
+	
+	        var _this = _possibleConstructorReturn(this, (HomeContainer.__proto__ || Object.getPrototypeOf(HomeContainer)).call(this, props));
+	
+	        _this.state = {
+	            articleOne: {
+	                title: "Article 1",
+	                date: "August 8, 2013",
+	                content: "blah blah blah"
+	            },
+	            articleTwo: {
+	                title: "Article 2",
+	                date: "August 14, 2013",
+	                content: "blah blah blah"
+	            },
+	            articleThree: {
+	                title: "Article 3",
+	                date: "August 21, 2013",
+	                content: "blah blah blah"
+	            }
+	        };
+	        return _this;
 	    }
 	
-	    _createClass(SignupContainer, [{
+	    _createClass(HomeContainer, [{
 	        key: 'render',
 	        value: function render() {
 	            return _react2.default.createElement(
 	                'div',
 	                null,
-	                _react2.default.createElement(_Home2.default, null)
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'logo' },
+	                    _react2.default.createElement(
+	                        'h3',
+	                        null,
+	                        'designory.'
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement(_Navbar2.default, null)
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'message' },
+	                    _react2.default.createElement(_Message2.default, null)
+	                ),
+	                _react2.default.createElement('div', null),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'articleone' },
+	                    _react2.default.createElement(_SmallArticle2.default, { article: this.state.articleOne })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'articletwo' },
+	                    _react2.default.createElement(_SmallArticle2.default, { article: this.state.articleTwo })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'articlethree' },
+	                    _react2.default.createElement(_SmallArticle2.default, { article: this.state.articleThree })
+	                )
 	            );
 	        }
 	    }]);
 	
-	    return SignupContainer;
+	    return HomeContainer;
 	}(_react.Component);
 	
 	var mapStateToProps = function mapStateToProps(state, ownProps) {
@@ -26678,7 +26737,7 @@
 	    return {};
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(SignupContainer);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(HomeContainer);
 
 /***/ },
 /* 235 */
@@ -28826,65 +28885,84 @@
 /* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
 	
-	exports.default = function (props) {
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var SmallArticle = function SmallArticle(props) {
 	    return _react2.default.createElement(
-	        'div',
+	        "div",
 	        null,
+	        _react2.default.createElement("div", { className: "innerbox" }),
 	        _react2.default.createElement(
-	            'div',
-	            { className: 'logo' },
+	            "div",
+	            null,
 	            _react2.default.createElement(
-	                'h3',
+	                "h2",
 	                null,
-	                'designory'
+	                "" + props.article.title
 	            )
-	        ),
-	        _react2.default.createElement(_Navbar2.default, null),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'articleone' },
-	            _react2.default.createElement(_SmallArticle2.default, null)
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'articletwo' },
-	            _react2.default.createElement(_SmallArticle2.default, null)
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'articletwo' },
-	            _react2.default.createElement(_SmallArticle2.default, null)
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'articlethree' },
-	            _react2.default.createElement(_SmallArticle2.default, null)
 	        )
 	    );
 	};
+	
+	exports.default = SmallArticle;
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	
 	var _react = __webpack_require__(1);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Navbar = __webpack_require__(272);
-	
-	var _Navbar2 = _interopRequireDefault(_Navbar);
-	
-	var _SmallArticle = __webpack_require__(273);
-	
-	var _SmallArticle2 = _interopRequireDefault(_SmallArticle);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Message = function Message() {
+	    return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	            "p",
+	            null,
+	            "Well, Hello there"
+	        ),
+	        _react2.default.createElement(
+	            "h2",
+	            null,
+	            "This is where your"
+	        ),
+	        _react2.default.createElement(
+	            "h2",
+	            null,
+	            "message should go."
+	        ),
+	        _react2.default.createElement(
+	            "button",
+	            { className: "buttonstyle" },
+	            "DOWNLOAD NOW"
+	        )
+	    );
+	};
+	
+	exports.default = Message;
 
 /***/ },
-/* 272 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28951,36 +29029,6 @@
 	exports.default = Navbar;
 
 /***/ },
-/* 273 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var Journal = function Journal(props) {
-	    return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	            'p',
-	            null,
-	            'SMALL ARTICLE'
-	        )
-	    );
-	};
-	
-	exports.default = Journal;
-
-/***/ },
 /* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -28994,7 +29042,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Navbar = __webpack_require__(272);
+	var _Navbar = __webpack_require__(273);
 	
 	var _Navbar2 = _interopRequireDefault(_Navbar);
 	
@@ -29004,7 +29052,6 @@
 	    return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(_Navbar2.default, null),
 	        _react2.default.createElement(
 	            'p',
 	            null,
