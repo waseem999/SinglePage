@@ -40,9 +40,6 @@ constructor(props) {
     render(){
         return (
         <div>
-            <div className="logo">
-                <h3>designory.<font size="1">®</font></h3>
-            </div>
             <div>
                 <Navbar/>
             </div>
@@ -61,7 +58,7 @@ constructor(props) {
                 <SmallArticle article={this.state.articleThree}/>
             </div>
             <div className="main-article">
-                <MainArticle article={this.state.mainArticle}/>
+                <MainArticle article={this.state.mainArticle} handleDownload={this.handleDownload}/>
             </div>
             <div>
                 <Footer/>

@@ -26721,20 +26721,6 @@
 	                null,
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'logo' },
-	                    _react2.default.createElement(
-	                        'h3',
-	                        null,
-	                        'designory.',
-	                        _react2.default.createElement(
-	                            'font',
-	                            { size: '1' },
-	                            '\xAE'
-	                        )
-	                    )
-	                ),
-	                _react2.default.createElement(
-	                    'div',
 	                    null,
 	                    _react2.default.createElement(_Navbar2.default, null)
 	                ),
@@ -26762,7 +26748,7 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'main-article' },
-	                    _react2.default.createElement(_MainArticle2.default, { article: this.state.mainArticle })
+	                    _react2.default.createElement(_MainArticle2.default, { article: this.state.mainArticle, handleDownload: this.handleDownload })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -29010,7 +28996,7 @@
 	            ),
 	            _react2.default.createElement(
 	                "button",
-	                { className: "button-style" },
+	                { className: "button-style", onClick: props.handleDownload },
 	                "DOWNLOAD NOW"
 	            )
 	        )
@@ -29071,7 +29057,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 	
 	var _react = __webpack_require__(1);
@@ -29083,50 +29069,60 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Navbar = function Navbar() {
-	    return _react2.default.createElement(
-	        'nav',
-	        { id: 'main-navbar' },
+	  return _react2.default.createElement(
+	    'nav',
+	    { id: 'main-navbar' },
+	    _react2.default.createElement(
+	      'h3',
+	      { style: { float: 'left', marginLeft: '.8em' } },
+	      'designory.',
+	      _react2.default.createElement(
+	        'font',
+	        { size: '1' },
+	        '\xAE'
+	      )
+	    ),
+	    _react2.default.createElement(
+	      'ul',
+	      null,
+	      _react2.default.createElement(
+	        'li',
+	        null,
 	        _react2.default.createElement(
-	            'ul',
-	            null,
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/contact' },
-	                    'CONTACT INFO'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/journal' },
-	                    'JOURNAL'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/process' },
-	                    'PROCESS'
-	                )
-	            ),
-	            _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: '/portfolio' },
-	                    'PORTFOLIO'
-	                )
-	            )
+	          _reactRouter.Link,
+	          { to: '/contact' },
+	          'CONTACT INFO'
 	        )
-	    );
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/journal' },
+	          'JOURNAL'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/process' },
+	          'PROCESS'
+	        )
+	      ),
+	      _react2.default.createElement(
+	        'li',
+	        null,
+	        _react2.default.createElement(
+	          _reactRouter.Link,
+	          { to: '/portfolio' },
+	          'PORTFOLIO'
+	        )
+	      )
+	    )
+	  );
 	};
 	
 	exports.default = Navbar;
@@ -29166,7 +29162,7 @@
 	                    _react2.default.createElement(
 	                              'p',
 	                              { style: { textAlign: 'right', float: 'right' } },
-	                              'COPYRIGHT 2013 ',
+	                              '\xA9 COPYRIGHT 2013 ',
 	                              _react2.default.createElement(
 	                                        'strong',
 	                                        null,

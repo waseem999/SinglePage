@@ -9,11 +9,11 @@
     border-color: #b3b3b3;
     border-style: solid;
     z-index: 998;
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 975px){
         width: 50%;
         position: static;
         z-index: 998;
-        margin: auto;
+        margin: auto
     }
 }
 

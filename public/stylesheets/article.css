@@ -9,7 +9,7 @@
   border-color: #b3b3b3;
   border-style: solid;
   z-index: 998; }
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 975px) {
     .article, .article-1, .article-2, .article-3 {
       width: 50%;
       position: static;

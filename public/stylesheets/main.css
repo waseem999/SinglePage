@@ -1,9 +1,10 @@
 #main-navbar {
   border-bottom: 3px solid black;
-  margin-top: -85px;
+  margin-top: 0px;
   width: 100%;
   font-size: 1.4em;
   position: fixed;
+  top: 0;
   z-index: 999;
   text-decoration: none;
   background-color: white; }
@@ -29,7 +30,7 @@
   border-color: #b3b3b3;
   border-style: solid;
   z-index: 998; }
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 975px) {
     .article, .article-1, .article-2, .article-3 {
       width: 50%;
       position: static;
@@ -130,17 +131,18 @@ body {
 .message {
   width: 100%;
   height: 400px;
+  margin-top: 90px;
   position: relative;
   background-color: #e6e6e6;
   border-bottom: 3px solid #b3b3b3;
   z-index: 2; }
   .message p {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 0px;
     margin-left: 10%;
     margin-top: -8px;
-    padding: 3px; }
+    padding-top: 40px; }
   .message h2 {
     margin-top: 0px;
     padding: 3px;
