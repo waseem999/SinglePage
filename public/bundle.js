@@ -29138,7 +29138,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	      value: true
+	          value: true
 	});
 	
 	var _react = __webpack_require__(1);
@@ -29150,20 +29150,30 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Footer = function Footer() {
-	      return _react2.default.createElement(
-	            'footer',
-	            { id: 'footer' },
-	            _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'Phone: 885.827.1938-'
-	            ),
-	            _react2.default.createElement(
-	                  'p',
-	                  null,
-	                  'COPYRIGHT 2013 DESIGNORY.COM'
-	            )
-	      );
+	          return _react2.default.createElement(
+	                    'footer',
+	                    { id: 'footer' },
+	                    _react2.default.createElement(
+	                              'p',
+	                              { style: { width: '20%', float: 'left' } },
+	                              'PHONE: ',
+	                              _react2.default.createElement(
+	                                        'strong',
+	                                        null,
+	                                        '885.827.1938'
+	                              )
+	                    ),
+	                    _react2.default.createElement(
+	                              'p',
+	                              { style: { textAlign: 'right', float: 'right' } },
+	                              'COPYRIGHT 2013 ',
+	                              _react2.default.createElement(
+	                                        'strong',
+	                                        null,
+	                                        'DESIGNORY.COM'
+	                              )
+	                    )
+	          );
 	};
 	
 	exports.default = Footer;
