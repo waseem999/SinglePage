@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-//import Home from '../components/Home.jsx';
 import SmallArticle from '../components/SmallArticle.jsx';
+import MainArticle from '../components/MainArticle.jsx';
 import Message from '../components/Message.jsx';
 import Navbar from '../components/Navbar.jsx';
+import Footer from '../components/Footer.jsx';
 
 class HomeContainer extends Component{
 constructor(props) {
@@ -23,7 +24,12 @@ constructor(props) {
             title: "Article 3",
             date: "August 21, 2013",
             content: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam"           
-        }
+        },
+        mainArticle : {
+            title: "get the New Razda template",
+            subheading: "The best way to showcase your work",
+            content: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam"             
+        },
     }
     this.handleDownload = this.handleDownload.bind(this);
   }
@@ -35,7 +41,7 @@ constructor(props) {
         return (
         <div>
             <div className="logo">
-                <h3>designory.</h3>
+                <h3>designory.<font size="1">®</font></h3>
             </div>
             <div>
                 <Navbar/>
@@ -54,6 +60,13 @@ constructor(props) {
             <div className="article-3">
                 <SmallArticle article={this.state.articleThree}/>
             </div>
+            <div className="main-article">
+                <MainArticle article={this.state.mainArticle}/>
+            </div>
+            <div>
+                <Footer/>
+            </div>
+
         </div>
         )
     }

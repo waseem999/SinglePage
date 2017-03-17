@@ -1,35 +1,44 @@
 .article, .article-1, .article-2, .article-3 {
   position: absolute;
   background-color: white;
-  width: 235px;
+  width: 320px;
   top: 60%;
-  height: 250px;
+  height: 350px;
   margin-left: -150px;
   margin-top: -100px;
   border-color: black;
   border-style: solid;
-  z-index: 999; }
+  z-index: 998; }
+  @media screen and (max-width: 950px) {
+    .article, .article-1, .article-2, .article-3 {
+      width: 50%;
+      position: static;
+      z-index: 998;
+      margin: auto; } }
 
 .innerbox, .article-1 .articleinnerbox, .article-2 .articleinnerbox, .article-3 .articleinnerbox {
   position: relative;
-  width: 215px;
+  width: 90%;
   height: 110px;
-  margin: auto;
+  margin-left: 5%;
+  margin-right: 5%;
   margin-top: 5%; }
 
 .article-1 {
-  left: 20%; }
+  left: 17%; }
   .article-1 h2 {
-    margin-left: 15px;
-    margin-top: 5px;
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 0%;
     font-weight: normal; }
   .article-1 h6 {
-    margin-left: 15px;
-    margin-top: -20px;
+    margin-left: 8%;
+    margin-top: 0%;
     font-weight: normal; }
   .article-1 p {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 0%;
     font-weight: normal;
     font-size: xx-small; }
   .article-1 .articleinnerbox {
@@ -38,34 +47,38 @@
 .article-2 {
   left: 50%; }
   .article-2 h2 {
-    margin-left: 15px;
-    margin-top: 5px;
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 0%;
     font-weight: normal; }
   .article-2 h6 {
-    margin-left: 15px;
-    margin-top: -20px;
+    margin-left: 8%;
+    margin-top: 0%;
     font-weight: normal; }
   .article-2 p {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 0%;
     font-weight: normal;
     font-size: xx-small; }
   .article-2 .articleinnerbox {
     background-color: #b3b3b3; }
 
 .article-3 {
-  left: 80%; }
+  left: 83%; }
   .article-3 h2 {
-    margin-left: 15px;
-    margin-top: 5px;
+    margin-left: 8%;
+    margin-top: 5%;
+    margin-bottom: 0%;
     font-weight: normal; }
   .article-3 h6 {
-    margin-left: 15px;
-    margin-top: -20px;
+    margin-left: 8%;
+    margin-top: 0%;
     font-weight: normal; }
   .article-3 p {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 0%;
     font-weight: normal;
     font-size: xx-small; }
   .article-3 .articleinnerbox {

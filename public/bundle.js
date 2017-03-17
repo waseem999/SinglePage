@@ -70,17 +70,17 @@
 	
 	var _Process2 = _interopRequireDefault(_Process);
 	
-	var _Journal = __webpack_require__(274);
+	var _Journal = __webpack_require__(278);
 	
 	var _Journal2 = _interopRequireDefault(_Journal);
 	
-	var _Contact = __webpack_require__(278);
+	var _Contact = __webpack_require__(279);
 	
 	var _Contact2 = _interopRequireDefault(_Contact);
 	
 	var _reactRedux = __webpack_require__(235);
 	
-	var _store = __webpack_require__(275);
+	var _store = __webpack_require__(280);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
@@ -26650,13 +26650,21 @@
 	
 	var _SmallArticle2 = _interopRequireDefault(_SmallArticle);
 	
-	var _Message = __webpack_require__(272);
+	var _MainArticle = __webpack_require__(272);
+	
+	var _MainArticle2 = _interopRequireDefault(_MainArticle);
+	
+	var _Message = __webpack_require__(273);
 	
 	var _Message2 = _interopRequireDefault(_Message);
 	
-	var _Navbar = __webpack_require__(273);
+	var _Navbar = __webpack_require__(274);
 	
 	var _Navbar2 = _interopRequireDefault(_Navbar);
+	
+	var _Footer = __webpack_require__(275);
+	
+	var _Footer2 = _interopRequireDefault(_Footer);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -26665,8 +26673,6 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	//import Home from '../components/Home.jsx';
-	
 	
 	var HomeContainer = function (_Component) {
 	    _inherits(HomeContainer, _Component);
@@ -26691,6 +26697,11 @@
 	                title: "Article 3",
 	                date: "August 21, 2013",
 	                content: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam"
+	            },
+	            mainArticle: {
+	                title: "get the New Razda template",
+	                subheading: "The best way to showcase your work",
+	                content: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam"
 	            }
 	        };
 	        _this.handleDownload = _this.handleDownload.bind(_this);
@@ -26714,7 +26725,12 @@
 	                    _react2.default.createElement(
 	                        'h3',
 	                        null,
-	                        'designory.'
+	                        'designory.',
+	                        _react2.default.createElement(
+	                            'font',
+	                            { size: '1' },
+	                            '\xAE'
+	                        )
 	                    )
 	                ),
 	                _react2.default.createElement(
@@ -26742,6 +26758,16 @@
 	                    'div',
 	                    { className: 'article-3' },
 	                    _react2.default.createElement(_SmallArticle2.default, { article: this.state.articleThree })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'main-article' },
+	                    _react2.default.createElement(_MainArticle2.default, { article: this.state.mainArticle })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    null,
+	                    _react2.default.createElement(_Footer2.default, null)
 	                )
 	            );
 	        }
@@ -28955,6 +28981,60 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	var MainArticle = function MainArticle(props) {
+	    return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.createElement(
+	            "div",
+	            { className: "main-articlebox" },
+	            _react2.default.createElement("div", { className: "main-innerbox" })
+	        ),
+	        _react2.default.createElement(
+	            "div",
+	            null,
+	            _react2.default.createElement(
+	                "h2",
+	                null,
+	                "" + props.article.title
+	            ),
+	            _react2.default.createElement(
+	                "h4",
+	                null,
+	                "" + props.article.subheading
+	            ),
+	            _react2.default.createElement(
+	                "p",
+	                null,
+	                "" + props.article.content
+	            ),
+	            _react2.default.createElement(
+	                "button",
+	                { className: "button-style" },
+	                "DOWNLOAD NOW"
+	            )
+	        )
+	    );
+	};
+	
+	exports.default = MainArticle;
+
+/***/ },
+/* 273 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
 	var Message = function Message(props) {
 	    return _react2.default.createElement(
 	        "div",
@@ -28985,7 +29065,7 @@
 	exports.default = Message;
 
 /***/ },
-/* 273 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29052,50 +29132,41 @@
 	exports.default = Navbar;
 
 /***/ },
-/* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var Journal = function Journal() {
-	    return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	            'h1',
-	            null,
-	            'JOURNAL PAGE'
-	        )
-	    );
-	};
-	
-	exports.default = Journal;
-
-/***/ },
 /* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	      value: true
 	});
 	
-	var _redux = __webpack_require__(244);
+	var _react = __webpack_require__(1);
 	
-	var store = (0, _redux.createStore)(function () {});
+	var _react2 = _interopRequireDefault(_react);
 	
-	exports.default = store;
+	var _reactRouter = __webpack_require__(178);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Footer = function Footer() {
+	      return _react2.default.createElement(
+	            'footer',
+	            { id: 'footer' },
+	            _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'Phone: 885.827.1938-'
+	            ),
+	            _react2.default.createElement(
+	                  'p',
+	                  null,
+	                  'COPYRIGHT 2013 DESIGNORY.COM'
+	            )
+	      );
+	};
+	
+	exports.default = Footer;
 
 /***/ },
 /* 276 */
@@ -29173,6 +29244,36 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
+	var Journal = function Journal() {
+	    return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	            'h1',
+	            null,
+	            'JOURNAL PAGE'
+	        )
+	    );
+	};
+	
+	exports.default = Journal;
+
+/***/ },
+/* 279 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	
+	var _react = __webpack_require__(1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
 	var Contact = function Contact() {
 	    return _react2.default.createElement(
 	        'div',
@@ -29186,6 +29287,22 @@
 	};
 	
 	exports.default = Contact;
+
+/***/ },
+/* 280 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _redux = __webpack_require__(244);
+	
+	var store = (0, _redux.createStore)(function () {});
+	
+	exports.default = store;
 
 /***/ }
 /******/ ]);

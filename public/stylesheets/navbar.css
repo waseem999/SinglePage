@@ -1,10 +1,12 @@
 #main-navbar {
-  border-color: black;
+  border-bottom: 3px solid black;
   margin-top: -85px;
   width: 100%;
   font-size: 1.4em;
   position: fixed;
-  text-decoration: none; }
+  z-index: 999;
+  text-decoration: none;
+  background-color: white; }
   #main-navbar ul a {
     text-decoration: none;
     color: black; }
