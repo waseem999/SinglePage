@@ -1,4 +1,4 @@
-# Stater Webpage
+# Starter Webpage
 I used React as the base framework for this page.  Each component of the page is reusable, and the HomeContainer is the main container for the components.  By using React, I was able to reuse the SmallArticle component to generate three articles, passing in the article information via the HomeContainer.  The download button functionality is defined in the HomeContainer and passed to the various components, generating a download alert when clicked.  
 
 The Navbar links to the various placeholder pages using React hash history.  
